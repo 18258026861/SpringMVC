@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--添加springmvc提供的,三个是固定的-->
+<!--  处理映射器，handler：处理器，mapping：映射器-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+<!--        作用：通过url查找handler返回给DispatcherServlet-->
+    </bean>
+<!-- 处理器适配器   Adapter：适配器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter">
+<!--        作用：找到对应的Controller去执行Handler，接收Controller返回的结果-->
+    </bean>
+
+<!-- 视图解析器  View:视图 Resolver：解析器-->
+<!--    作用：获得Controller返回的结果
+               解析ModelandView的view名字
+                通过前缀和后缀拼接视图的路径，找到该视图
+                  把数据渲染到该视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 前缀，默认的路径是web文件夹下，我们的文件夹在web-inf里面，java代码里就可以省略这部分了-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!-- 后缀去掉jsp，只要写文件名-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="/hello" class="y.controller.Controllers"></bean>
+
+
+</beans>

@@ -1,0 +1,5 @@
+# Project exclude paths
+/1-servlet/target/
+/2-helloMVC/target/
+/out/
+/test/target/
