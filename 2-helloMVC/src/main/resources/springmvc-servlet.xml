@@ -26,6 +26,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+<!--    id 相当于servlet-mapping中的url-->
     <bean id="/hello" class="y.controller.Controllers"></bean>
 
 

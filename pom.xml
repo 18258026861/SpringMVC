@@ -11,8 +11,9 @@
   <modules>
     <module>1-servlet</module>
     <module>2-helloMVC</module>
-    <module>0-test</module>
     <module>test</module>
+      <module>3-annotation</module>
+    <module>4-controller</module>
   </modules>
 
   <name>MVC</name>
