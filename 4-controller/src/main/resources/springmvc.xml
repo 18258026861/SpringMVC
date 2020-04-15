@@ -14,11 +14,12 @@
 
     <mvc:default-servlet-handler/>
 
-    <mvc:annotation-driven/>
-
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="suffix" value=".jsp"/>
         <property name="prefix" value="/WEB-INF/JSP/"/>
     </bean>
+
+    <mvc:annotation-driven>
+    </mvc:annotation-driven>
 
 </beans>
