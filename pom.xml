@@ -15,6 +15,9 @@
       <module>3-annotation</module>
     <module>4-controller</module>
     <module>5-Json</module>
+      <module>6-ajax</module>
+    <module>7--interceptor</module>
+
   </modules>
 
   <name>MVC</name>

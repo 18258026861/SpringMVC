@@ -10,16 +10,10 @@
        http://www.springframework.org/schema/mvc
        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--    自动扫描包-->
     <context:component-scan base-package="controller"/>
 
-    <!--会在Spring MVC上下文中定义一个DefaultServletHttpRequestHandler
-        如果发现URL是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，
-        如果不是静态资源的请求，才由DispatcherServlet继续处理。-->
-    <mvc:default-servlet-handler/>
-    <!--    自动开启HandlerMapping,HandlerApdater-->
     <mvc:annotation-driven>
-<!--        处理JSON乱码-->
+        <!--        处理JSON乱码-->
         <mvc:message-converters register-defaults="true">
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                 <constructor-arg value="UTF-8"/>
@@ -34,9 +28,12 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <mvc:default-servlet-handler/>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/JSP/"/>
         <property name="suffix" value=".jsp"/>
+        <property name="prefix" value="/WEB-INF/JSP/"/>
     </bean>
+
 
 </beans>
