@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Interceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("==============before==================");
+//        System.out.println("==============before==================");
         //        放行，执行下一个拦截器
         return true;
 //        不执行下一个拦截器

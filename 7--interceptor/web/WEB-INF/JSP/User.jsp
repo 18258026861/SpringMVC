@@ -13,7 +13,8 @@
 </head>
 <body>
 
-<h1>User</h1>
+${sessionScope.username}
 
+<a href="${pageContext.request.contextPath}/Login/quit">退出</a>
 </body>
 </html>
